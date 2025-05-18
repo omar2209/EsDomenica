@@ -22,6 +22,10 @@ export class AppComponent implements OnInit {
 
   constructor(http: HttpClient){this.http = http}
 
+  salva(nome: HTMLInputElement, cognome: HTMLInputElement, indirizzo: HTMLInputElement, telefono: HTMLInputElement, email: HTMLInputElement, data: HTMLInputElement, ora: HTMLInputElement ){
+    this.vettPrenotazioni.push(new Prenotazioni(nome.value, cognome.value, indirizzo.value, telefono.value, email.value, data.value, ora.value ))
+    console.log(this.vettPrenotazioni)
+  }
   makeGet(){
     this.loading = true
     this.o_vettPrenotazioni = this.http.get<Prenotazioni[]>("https://my-json-server.typicode.com/malizia-g/verificaPrenotazioni/prenotazioni")

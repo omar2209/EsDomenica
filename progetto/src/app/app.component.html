@@ -13,10 +13,11 @@
 <input type="text" #data placeholder="Data Prenotazione">
 <br>
 <input type="text" #ora placeholder="Ora prenotazione">
+<br>
+<button (click)="salva(nome, cognome, indirizzo, telefono, email, data, ora)">Salva</button>
 <br><br>
 <h3>Lista Prenotazioni</h3>
 @for(a of vettPrenotazioni; track a){
   <br>
   <app-lista-prenotazioni [prenotazione]="a"></app-lista-prenotazioni>
 }
-  
