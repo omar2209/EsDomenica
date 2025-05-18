@@ -13,14 +13,10 @@
 <input type="text" #data placeholder="Data Prenotazione">
 <br>
 <input type="text" #ora placeholder="Ora prenotazione">
-
+<br><br>
+<h3>Lista Prenotazioni</h3>
 @for(a of vettPrenotazioni; track a){
-  <br><br>
-  {{a.nome}}<br>
-  {{a.cognome}}<br>
-  {{a.indirizzo}}<br>
-  {{a.telefono}}<br>
-  {{a.email}}<br>
-  {{a.data}}<br>
-  {{a.ora}}<br>
+  <br>
+  <app-lista-prenotazioni [prenotazione]="a"></app-lista-prenotazioni>
 }
+  
